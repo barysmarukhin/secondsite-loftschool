@@ -1,0 +1,15 @@
+footer.footer
+    .footer__container
+        a.logo-ft
+        .footer__socials
+            ul.socials__list
+                each social in socials
+                    li.socials__item.socials__item
+                        a.socials__link(href="#" class="socials__link "+"socials__link_wt_"+social)
+        .footer__firstnav
+            + commonnav ("footer__firstnav",["Планшеты","Мобильные телефоны","Mp3 плееры"],1)
+        .footer__secondnav
+            + commonnav ("footer__secondnav",["Персональные компьютеры","Ноутбуки","Аксессуары","Бытовая техника"],1)
+
+    .footer__copyright
+        p.copyright__text All rights reserved. 2015. no copy alowed

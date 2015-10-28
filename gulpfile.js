@@ -12,26 +12,26 @@ var
 var
 	paths = {
 		jade : {
-			location    : 'markups/**/*.jade',
-			compiled    : 'markups/_pages/*.jade',
-			destination : '.'
+			location    : 'app/markups/**/*.jade',
+			compiled    : 'app/markups/_pages/*.jade',
+			destination : 'app/'
 		},
 
 		scss : {
-			location    : 'styles/**/*.scss',
+			location    : 'app/styles/**/*.scss',
 			entryPoint  : 'app/css/main.css'
 		},
 
 		compass : {
 			configFile  : 'config.rb',
 			cssFolder   : 'app/css/',
-			scssFolder  : 'styles',
+			scssFolder  : 'app/styles',
 			imgFolder   : 'app/img/'
 		},
 
 		browserSync : {
-			baseDir : 'app',
-			watchPaths : ['*.html', 'css/*.css', 'js/*.js']
+			baseDir : './app/',
+			watchPaths : ['app/*.html', 'app/css/*.css', 'app/js/*.js']
 		}
 	}
 
@@ -63,8 +63,9 @@ gulp.task('compass', function() {
 
 gulp.task('sync', function() {
 	browserSync.init({
+		port:9000,
 		server: {
-			baseDir: 'paths.browserSync.baseDir'
+			baseDir: paths.browserSync.baseDir
 		}
 	});
 });

@@ -6,7 +6,7 @@ http_path = "app/" #Путь для спрайта
 css_dir = "app/css/"
 sass_dir = "styles/"
 images_dir = "app/img/"
-javascripts_dir = "javascripts"
+javascripts_dir = "app/js/"
 
 # You can select your preferred output style here (can be overridden via the command line):
 # output_style = :expanded or :nested or :compact or :compressed
@@ -19,7 +19,7 @@ relative_assets = false
 # To disable debugging comments that display the original location of your selectors. Uncomment:
 # line_comments = false
 line_comments = true #Соответствие sass и scc
-
+preferred_syntax = :scss
 # If you prefer the indented syntax, you might want to regenerate this
 # project again passing --syntax sass, or you can uncomment this:
 # preferred_syntax = :sass

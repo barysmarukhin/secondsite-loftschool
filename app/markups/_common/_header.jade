@@ -1,0 +1,23 @@
+header.header
+	.header__top
+		.header__top__container
+			.socials
+				ul.socials__list
+					- var socials = ['fb', 'vk', 'tw']
+					each social in socials
+						li.socials__item
+							a.socials__link(href="#" class="socials__link "+"socials__link_"+social)
+			.phone
+				a.phone__text +7 (921) 123-12-13
+			.address
+				p.adress__text ул. Маяковская 6, офис 17
+	.header__bottom
+		a.header__bottom-logo
+		form.header__bottom-search
+			input.header__bottom-search__input(type="text" placeholder="Что будем искать?")
+			button.header__bottom-search__button(type="submit")
+				|Найти
+		.header__bottom-topnav
+			+ commonnav('header__bottom-topnav', ["Карта проезда","История заказов","Корзина"],0)
+			
+

@@ -1,0 +1,14 @@
+extends ../main
+- var brands=["Lenovo","Apple","Samsung","Asus","Motorola"]
+- var ourOS =["Androin","IOS","Windows Mobile","Symbian","Custom"]
+block title
+	| Главная страница
+
+block content
+	h1.page-title Мобильные телефоны
+	aside.sidebar
+		.sidebar__wrapper
+			include ../_common/_sidebar
+	.variable-content
+		.article__inner
+			| Я контент на главной
