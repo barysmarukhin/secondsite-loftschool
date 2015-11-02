@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="ru-Ru">
 	<head>
-		<meta name="viewport" content="device-width">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<link rel="stylesheet" type="text/css" href="/css/main.css">
-		<link rel="stylesheet" type="text/css" href="./css/select.css">
-		<script src="bower/modernizr/modernizr.js"></script>
+		<script src="js/modernizr-2.6.2-respond-1.1.0.min.js"></script>
 		<title>Главная страница</title>
 	</head>
 	<body>
@@ -24,13 +23,14 @@
 									<li class="socials__item"><a href="#" class="socials__link socials__link socials__link_tw"></a></li>
 								</ul>
 							</div>
-							<div class="phone"><a class="phone__text">+7 (921) 123-12-13</a></div>
+							<div class="phone"><a href="tel:+79211231213" class="phone__text">+7 (921) 123-12-13</a></div>
 							<div class="address">
 								<p class="adress__text">ул. Маяковская 6, офис 17</p>
 							</div>
 						</div>
 					</div>
-					<div class="header__bottom"><a class="header__bottom-logo"></a>
+					<div class="header__bottom"><a href="#" class="header__bottom-logo"><img src="../img/logo.png" alt="cooltech logo" class="logo_img">
+							<div class="logo__text">cooltech</div></a>
 						<form class="header__bottom-search">
 							<input type="text" placeholder="Что будем искать?" class="header__bottom-search__input">
 							<button type="submit" class="header__bottom-search__button">Найти</button>
@@ -65,450 +65,777 @@
 						<li class="main-content__item main-content__item_active"><a href="#" class="main-content__link">Каталог</a></li>
 						<h1 class="title-page">Мобильные телефоны</h1>
 					</div>
-					<sidebar class="sidebar">
-						<div class="product-class">
-							<ul class="product-class__list">
-								<li class="product-class__item "><a href="#" class="product-class__link">Флагманы</a></li>
-								<li class="product-class__item "><a href="#" class="product-class__link">Бюджетная линейка</a></li>
-							</ul>
-						</div>
-						<div class="product-settings">
-							<ul class="product-settings__list">
-								<li class="product-settings__item product-settings__item-avail"><a class="trigger trigger_close">Наличие в магазинах</a>
-									<div class="inner-item">
-										<forn class="avail">
-											<ul class="avail__list">
-												<li class="avail__item">
-													<input type="radio" checked="checked" name="avail" id="avail__in-all_1" class="avail__in-all">
-													<label for="avail__in-all_1" class="avail__text">  Во всех магазинах</label>
+					<div class="main-content">
+						<sidebar class="sidebar">
+							<div class="product-class">
+								<ul class="product-class__list">
+									<li class="product-class__item "><a href="#" class="product-class__link">Флагманы</a></li>
+									<li class="product-class__item "><a href="#" class="product-class__link">Бюджетная линейка</a></li>
+								</ul>
+							</div>
+							<div class="filter">
+								<ul class="filter__list">
+									<li class="filter__item">
+										<div class="filter__title"><a href="#" class="filter__title-link">Наличие в магазинах</a></div>
+										<div class="filter__content">
+											<ul class="filter__choose">
+												<li class="filter__choose-item">
+													<label class="filter__choose-label">
+														<input name="location" type="radio" class="filter__choose-input">
+														<div class="filter__choose-elem"></div>
+														<div class="filter__choose-text">Во всех магазинах</div>
+													</label>
 												</li>
-												<li class="avail__item">
-													<input type="radio" name="avail" id="avail__in-all_2" class="avail__in-all">
-													<label for="avail__in-all_2" class="avail__text">  В ближайшем ко мне магазине</label>
+												<li class="filter__choose-item">
+													<label class="filter__choose-label">
+														<input name="location" type="radio" class="filter__choose-input">
+														<div class="filter__choose-elem"></div>
+														<div class="filter__choose-text">В ближайшем ко мне магазине</div>
+													</label>
 												</li>
-											</ul>
-										</forn>
-									</div>
-								</li>
-								<li class="product-settings__item product-settings__item-brand"><a class="trigger trigger_close"> Бренды</a>
-									<div class="inner-item">
-										<form class="brand">
-											<ul class="brand__list">
-												<li class="brand__item ">
-													<input type="checkbox" name="brand" id="Lenovo_1" class="brand__checkbox"/>
-													<label for="Lenovo_1" class="brand__text">Lenovo</label>
-												</li>
-												<li class="brand__item ">
-													<input type="checkbox" name="brand" id="Apple_2" class="brand__checkbox"/>
-													<label for="Apple_2" class="brand__text">Apple</label>
-												</li>
-												<li class="brand__item ">
-													<input type="checkbox" name="brand" id="Samsung_3" class="brand__checkbox"/>
-													<label for="Samsung_3" class="brand__text">Samsung</label>
-												</li>
-												<li class="brand__item ">
-													<input type="checkbox" name="brand" id="Asus_4" class="brand__checkbox"/>
-													<label for="Asus_4" class="brand__text">Asus</label>
-												</li>
-												<li class="brand__item ">
-													<input type="checkbox" name="brand" id="Motorola_5" class="brand__checkbox"/>
-													<label for="Motorola_5" class="brand__text">Motorola</label>
-												</li>
-											</ul><a href="#" id="filter-off_1" class="brand__filter-off">Сбросить фильтр</a>
-										</form>
-									</div>
-								</li>
-								<li class="product-settings__item product-settings__item-price"><a class="trigger trigger_close"> Цена</a>
-									<div class="inner-item">
-										<form class="price"><span class="price__text">от</span>
-											<input type="text" class="price__from"><span class="price__text">до</span>
-											<input type="text" class="price__to">
-										</form>
-										<div id="slider-range"></div>
-									</div>
-								</li>
-								<li class="product-settings__item product-settings__item-color"><a class="trigger trigger_close"> Цвет</a>
-									<div class="inner-item">
-										<div class="color">
-											<ul class="color__list">
-												<li class="color__item color__item_ffffff"></li>
-												<li class="color__item color__item_cccccc"></li>
-												<li class="color__item color__item_000000"></li>
-												<li class="color__item color__item_0a3153"></li>
-												<li class="color__item color__item_ff1800"></li>
-												<li class="color__item color__item_fff343"></li>
-												<li class="color__item color__item_fb914a"></li>
-												<li class="color__item color__item_92c37c"></li>
-												<li class="color__item color__item_40a6ff"></li>
-												<li class="color__item color__item_9870ad"></li>
-												<li class="color__item color__item_dc78ad"></li>
-												<li class="color__item color__item_7f401d"></li>
 											</ul>
 										</div>
+									</li>
+									<li class="filter__item">
+										<div class="filter__title"><a href="#" class="filter__title-link">Бренды</a></div>
+										<div class="filter__content">
+											<ul class="filter__choose filter__choose_checkboxes">
+												<li class="filter__choose-item">
+													<label class="filter__choose-label">
+														<input name="" type="checkbox" class="filter__choose-input">
+														<div class="filter__choose-elem"></div>
+														<div class="filter__choose-text">Lenovo</div>
+													</label>
+												</li>
+												<li class="filter__choose-item">
+													<label class="filter__choose-label">
+														<input name="" type="checkbox" class="filter__choose-input">
+														<div class="filter__choose-elem"></div>
+														<div class="filter__choose-text">Apple</div>
+													</label>
+												</li>
+												<li class="filter__choose-item">
+													<label class="filter__choose-label">
+														<input name="" type="checkbox" class="filter__choose-input">
+														<div class="filter__choose-elem"></div>
+														<div class="filter__choose-text">Samsung</div>
+													</label>
+												</li>
+												<li class="filter__choose-item">
+													<label class="filter__choose-label">
+														<input name="" type="checkbox" class="filter__choose-input">
+														<div class="filter__choose-elem"></div>
+														<div class="filter__choose-text">Asus</div>
+													</label>
+												</li>
+												<li class="filter__choose-item">
+													<label class="filter__choose-label">
+														<input name="" type="checkbox" class="filter__choose-input">
+														<div class="filter__choose-elem"></div>
+														<div class="filter__choose-text">Motorola</div>
+													</label>
+												</li>
+											</ul>
+											<div class="filter__reset--wrap"><a href="#" class="filter__reset">Сбросить фильтр</a></div>
+										</div>
+									</li>
+									<li class="filter__item">
+										<div class="filter__title"><a href="#" class="filter__title-link">Цена</a></div>
+										<div class="filter__content">
+											<div class="filter__slider">
+												<div class="filter__slider-displays">
+													<div class="filter__slider-left">
+														<div class="filter__slider-text">от</div>
+														<input name="" type="text" placeholder="" class="filter__slider-input filter__slider-input_from">
+													</div>
+													<div class="filter__slider-right">
+														<div class="filter__slider-text">до</div>
+														<input name="" type="text" placeholder="" class="filter__slider-input filter__slider-input_to">
+													</div>
+												</div>
+												<div data-min="0" data-max="30000" class="filter__slider-element"></div>
+											</div>
+										</div>
+									</li>
+									<li class="filter__item">
+										<div class="filter__title"><a href="#" class="filter__title-link">Цвет</a></div>
+										<div class="filter__content">
+											<ul class="filter__colors">
+												<li class="filter__colors-item"><a href="#" style="background-color:#ffffff" class="filter__colors-link"></a></li>
+												<li class="filter__colors-item"><a href="#" style="background-color:#cccccc" class="filter__colors-link"></a></li>
+												<li class="filter__colors-item"><a href="#" style="background-color:#000000" class="filter__colors-link"></a></li>
+												<li class="filter__colors-item"><a href="#" style="background-color:#0a3153" class="filter__colors-link"></a></li>
+												<li class="filter__colors-item"><a href="#" style="background-color:#ff1800" class="filter__colors-link"></a></li>
+												<li class="filter__colors-item"><a href="#" style="background-color:#fff343" class="filter__colors-link"></a></li>
+												<li class="filter__colors-item"><a href="#" style="background-color:#fb914a" class="filter__colors-link"></a></li>
+												<li class="filter__colors-item"><a href="#" style="background-color:#92c37c" class="filter__colors-link"></a></li>
+												<li class="filter__colors-item"><a href="#" style="background-color:#40a6ff" class="filter__colors-link"></a></li>
+												<li class="filter__colors-item"><a href="#" style="background-color:#9870ad" class="filter__colors-link"></a></li>
+												<li class="filter__colors-item"><a href="#" style="background-color:#dc78ad" class="filter__colors-link"></a></li>
+												<li class="filter__colors-item"><a href="#" style="background-color:#7f401d" class="filter__colors-link"></a></li>
+											</ul>
+											<div class="filter__reset--wrap"><a href="#" class="filter__reset-link"></a></div>
+										</div>
+									</li>
+									<li class="filter__item">
+										<div class="filter__title"><a href="#" class="filter__title-link">Операционная система</a></div>
+										<div class="filter__content">
+											<ul class="filter__choose filter__choose_checkboxes">
+												<li class="filter__choose-item">
+													<label class="filter__choose-label">
+														<input name="" type="checkbox" class="filter__choose-input">
+														<div class="filter__choose-elem"></div>
+														<div class="filter__choose-text">Android</div>
+													</label>
+												</li>
+												<li class="filter__choose-item">
+													<label class="filter__choose-label">
+														<input name="" type="checkbox" class="filter__choose-input">
+														<div class="filter__choose-elem"></div>
+														<div class="filter__choose-text">iOs</div>
+													</label>
+												</li>
+												<li class="filter__choose-item">
+													<label class="filter__choose-label">
+														<input name="" type="checkbox" class="filter__choose-input">
+														<div class="filter__choose-elem"></div>
+														<div class="filter__choose-text">Symbian</div>
+													</label>
+												</li>
+												<li class="filter__choose-item">
+													<label class="filter__choose-label">
+														<input name="" type="checkbox" class="filter__choose-input">
+														<div class="filter__choose-elem"></div>
+														<div class="filter__choose-text">Windows Mobile</div>
+													</label>
+												</li>
+												<li class="filter__choose-item">
+													<label class="filter__choose-label">
+														<input name="" type="checkbox" class="filter__choose-input">
+														<div class="filter__choose-elem"></div>
+														<div class="filter__choose-text">Custom</div>
+													</label>
+												</li>
+											</ul>
+											<div class="filter__reset--wrap"><a href="#" class="filter__reset">Сбросить фильтр</a></div>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</sidebar>
+						<div class="content">
+							<div class="sort">
+								<div class="sort__left">
+									<div class="sort__select--wrap">
+										<div class="sort__title">Сортировать по</div>
+										<div class="sort__select">
+											<select class="sort__select-elem">
+												<option value="">по цене</option>
+												<option value="">по популярности</option>
+											</select>
+										</div>
 									</div>
-								</li>
-								<li class="product-settings__item product-settings__item-os"><a class="trigger trigger_close"> Операционные системы</a>
-									<div class="inner-item">
-										<form class="osss">
-											<ul class="os__list">
-												<li class="os__item ">
-													<input type="checkbox" name="os" id="Androin_6" class="os__checkbox"/>
-													<label for="Androin_6" class="os__text">Androin</label>
-												</li>
-												<li class="os__item ">
-													<input type="checkbox" name="os" id="IOS_7" class="os__checkbox"/>
-													<label for="IOS_7" class="os__text">IOS</label>
-												</li>
-												<li class="os__item ">
-													<input type="checkbox" name="os" id="Windows Mobile_8" class="os__checkbox"/>
-													<label for="Windows Mobile_8" class="os__text">Windows Mobile</label>
-												</li>
-												<li class="os__item ">
-													<input type="checkbox" name="os" id="Symbian_9" class="os__checkbox"/>
-													<label for="Symbian_9" class="os__text">Symbian</label>
-												</li>
-												<li class="os__item ">
-													<input type="checkbox" name="os" id="Custom_10" class="os__checkbox"/>
-													<label for="Custom_10" class="os__text">Custom</label>
-												</li>
-											</ul><a href="#" id="filter-off_3" class="brand__filter-off">Сбросить фильтр</a>
-										</form>
+								</div>
+								<div class="sort__right">
+									<div class="sort__title">Вид каталога</div>
+									<div class="sort__view">
+										<ul class="sort__view-list">
+											<li data-view="rows" class="sort__view-item sort__view-rows"><a href="#" class="sort__view-link">
+													<div class="sort__view-icon"></div></a></li>
+											<li data-view="grids" class="sort__view-item sort__view-grids"><a href="#" class="sort__view-link">
+													<div class="sort__view-icon"></div></a></li>
+											<li data-view="lines" class="sort__view-item sort__view-lines"><a href="#" class="sort__view-link">
+													<div class="sort__view-icon"></div></a></li>
+										</ul>
 									</div>
-								</li>
-							</ul>
+								</div>
+							</div>
+							<div class="products">
+								<ul id="products-list" class="products__list">
+									<li class="products__item">
+										<div class="products__item-inner">
+											<div class="products__left">
+												<div class="products__slideshow">
+													<div class="products__slideshow-block"><a href="#" class="products__slideshow-display"><img src="img/telephone/shop_00.png" alt="" class="products__slideshow-img"></a>
+														<ul class="products__slideshow-thumbs">
+															<li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="img/telephone/shop_01.png" alt="" class="products__slideshow-thumb-img"></a></li>
+															<li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="img/telephone/shop_02.png" alt="" class="products__slideshow-thumb-img"></a></li>
+															<li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="img/telephone/shop_03.png" alt="" class="products__slideshow-thumb-img"></a></li>
+														</ul>
+													</div>
+													<div class="products__article">
+														<div class="products__article-word">Артикул</div>
+														<div class="products__article-num">189238</div>
+													</div>
+												</div>
+												<div class="products__desc">
+													<div class="products__desc-title">Samsung GT-l9301l GALAXY S 3</div>
+													<ul class="products__desc-options">
+														<li class="products__option-item products__option-item_colored">
+															<div class="products__option-key">Тип SIM-карты</div>
+															<div class="products__option-value">Micro-SIM</div>
+														</li>
+														<li class="products__option-item">
+															<div class="products__option-key">Количество SIM-карт</div>
+															<div class="products__option-value">1</div>
+														</li>
+														<li class="products__option-item products__option-item_colored">
+															<div class="products__option-key">Цвет</div>
+															<div class="products__option-value">Белый</div>
+														</li>
+														<li class="products__option-item">
+															<div class="products__option-key">ОC</div>
+															<div class="products__option-value">Android</div>
+														</li>
+														<li class="products__option-item products__option-item_colored">
+															<div class="products__option-key">Связь 3G</div>
+															<div class="products__option-value">Есть</div>
+														</li>
+														<li class="products__option-item">
+															<div class="products__option-key">4G (LTE)</div>
+															<div class="products__option-value">Нет</div>
+														</li>
+														<li class="products__option-item products__option-item_colored">
+															<div class="products__option-key">GPS-модуль</div>
+															<div class="products__option-value">Есть</div>
+														</li>
+													</ul>
+													<div data-rating='4' class="products__rating"></div>
+												</div>
+											</div>
+											<div class="products__right">
+												<div class="products__info">
+													<div class="products__price">11 090<i class="rub"></i></div>
+												</div>
+												<div class="products__info-bottom"><a href="#" class="products__buy-btn">В корзину</a>
+													<div class="products__availability">В наличии</div>
+												</div>
+											</div>
+										</div>
+									</li>
+									<li class="products__item">
+										<div class="products__item-inner">
+											<div class="products__left">
+												<div class="products__slideshow">
+													<div class="products__slideshow-block"><a href="#" class="products__slideshow-display"><img src="img/telephone/shop_10.png" alt="" class="products__slideshow-img"></a>
+														<ul class="products__slideshow-thumbs">
+															<li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="img/telephone/shop_11.png" alt="" class="products__slideshow-thumb-img"></a></li>
+															<li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="img/telephone/shop_12.png" alt="" class="products__slideshow-thumb-img"></a></li>
+															<li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="img/telephone/shop_13.png" alt="" class="products__slideshow-thumb-img"></a></li>
+														</ul>
+													</div>
+													<div class="products__article">
+														<div class="products__article-word">Артикул</div>
+														<div class="products__article-num">283135</div>
+													</div>
+												</div>
+												<div class="products__desc">
+													<div class="products__desc-title">Microsoft Lumia 640 RM-1077</div>
+													<ul class="products__desc-options">
+														<li class="products__option-item products__option-item_colored">
+															<div class="products__option-key">Тип SIM-карты</div>
+															<div class="products__option-value">Micro-SIM</div>
+														</li>
+														<li class="products__option-item">
+															<div class="products__option-key">Количество SIM-карт</div>
+															<div class="products__option-value">2</div>
+														</li>
+														<li class="products__option-item products__option-item_colored">
+															<div class="products__option-key">Цвет</div>
+															<div class="products__option-value">Белый</div>
+														</li>
+														<li class="products__option-item">
+															<div class="products__option-key">ОC</div>
+															<div class="products__option-value">Windows Phone</div>
+														</li>
+														<li class="products__option-item products__option-item_colored">
+															<div class="products__option-key">Связь 3G</div>
+															<div class="products__option-value">Есть</div>
+														</li>
+														<li class="products__option-item">
+															<div class="products__option-key">4G (LTE)</div>
+															<div class="products__option-value">Нет</div>
+														</li>
+														<li class="products__option-item products__option-item_colored">
+															<div class="products__option-key">GPS-модуль</div>
+															<div class="products__option-value">A-GPS</div>
+														</li>
+													</ul>
+													<div data-rating='4' class="products__rating"></div>
+												</div>
+											</div>
+											<div class="products__right">
+												<div class="products__info">
+													<div class="products__price">10 990<i class="rub"></i></div>
+												</div>
+												<div class="products__info-bottom"><a href="#" class="products__buy-btn">В корзину</a>
+													<div class="products__availability">В наличии</div>
+												</div>
+											</div>
+										</div>
+									</li>
+									<li class="products__item">
+										<div class="products__item-inner">
+											<div class="products__left">
+												<div class="products__slideshow">
+													<div class="products__slideshow-block"><a href="#" class="products__slideshow-display"><img src="img/telephone/shop_20.png" alt="" class="products__slideshow-img"></a>
+														<ul class="products__slideshow-thumbs">
+															<li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="img/telephone/shop_21.png" alt="" class="products__slideshow-thumb-img"></a></li>
+															<li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="img/telephone/shop_22.png" alt="" class="products__slideshow-thumb-img"></a></li>
+															<li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="img/telephone/shop_23.png" alt="" class="products__slideshow-thumb-img"></a></li>
+														</ul>
+													</div>
+													<div class="products__article">
+														<div class="products__article-word">Артикул</div>
+														<div class="products__article-num">345328</div>
+													</div>
+												</div>
+												<div class="products__desc">
+													<div class="products__desc-title">Archos 50 Oxygen Plus</div>
+													<ul class="products__desc-options">
+														<li class="products__option-item products__option-item_colored">
+															<div class="products__option-key">Тип SIM-карты</div>
+															<div class="products__option-value">Micro-SIM</div>
+														</li>
+														<li class="products__option-item">
+															<div class="products__option-key">Количество SIM-карт</div>
+															<div class="products__option-value">2</div>
+														</li>
+														<li class="products__option-item products__option-item_colored">
+															<div class="products__option-key">Цвет</div>
+															<div class="products__option-value">Серый</div>
+														</li>
+														<li class="products__option-item">
+															<div class="products__option-key">ОC</div>
+															<div class="products__option-value">Android</div>
+														</li>
+														<li class="products__option-item products__option-item_colored">
+															<div class="products__option-key">Связь 3G</div>
+															<div class="products__option-value">Есть</div>
+														</li>
+														<li class="products__option-item">
+															<div class="products__option-key">4G (LTE)</div>
+															<div class="products__option-value">Нет</div>
+														</li>
+														<li class="products__option-item products__option-item_colored">
+															<div class="products__option-key">GPS-модуль</div>
+															<div class="products__option-value">Есть</div>
+														</li>
+													</ul>
+													<div data-rating='4' class="products__rating"></div>
+												</div>
+											</div>
+											<div class="products__right">
+												<div class="products__info">
+													<div class="products__price">9 990<i class="rub"></i></div>
+												</div>
+												<div class="products__info-bottom"><a href="#" class="products__buy-btn">В корзину</a>
+													<div class="products__availability">В наличии</div>
+												</div>
+											</div>
+										</div>
+									</li>
+									<li class="products__item">
+										<div class="products__item-inner">
+											<div class="products__left">
+												<div class="products__slideshow">
+													<div class="products__slideshow-block"><a href="#" class="products__slideshow-display"><img src="img/telephone/shop_30.png" alt="" class="products__slideshow-img"></a>
+														<ul class="products__slideshow-thumbs">
+															<li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="img/telephone/shop_31.png" alt="" class="products__slideshow-thumb-img"></a></li>
+															<li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="img/telephone/shop_32.png" alt="" class="products__slideshow-thumb-img"></a></li>
+															<li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="img/telephone/shop_33.png" alt="" class="products__slideshow-thumb-img"></a></li>
+														</ul>
+													</div>
+													<div class="products__article">
+														<div class="products__article-word">Артикул</div>
+														<div class="products__article-num">589338</div>
+													</div>
+												</div>
+												<div class="products__desc">
+													<div class="products__desc-title">Philips S398 Black</div>
+													<ul class="products__desc-options">
+														<li class="products__option-item products__option-item_colored">
+															<div class="products__option-key">Тип SIM-карты</div>
+															<div class="products__option-value"></div>
+														</li>
+														<li class="products__option-item">
+															<div class="products__option-key">Количество SIM-карт</div>
+															<div class="products__option-value">2</div>
+														</li>
+														<li class="products__option-item products__option-item_colored">
+															<div class="products__option-key">Цвет</div>
+															<div class="products__option-value"></div>
+														</li>
+														<li class="products__option-item">
+															<div class="products__option-key">ОC</div>
+															<div class="products__option-value">Android</div>
+														</li>
+														<li class="products__option-item products__option-item_colored">
+															<div class="products__option-key">Связь 3G</div>
+															<div class="products__option-value"></div>
+														</li>
+														<li class="products__option-item">
+															<div class="products__option-key">4G (LTE)</div>
+															<div class="products__option-value">Нет</div>
+														</li>
+														<li class="products__option-item products__option-item_colored">
+															<div class="products__option-key">GPS-модуль</div>
+															<div class="products__option-value"></div>
+														</li>
+													</ul>
+													<div data-rating='4' class="products__rating"></div>
+												</div>
+											</div>
+											<div class="products__right">
+												<div class="products__info">
+													<div class="products__price">8 990<i class="rub"></i></div>
+												</div>
+												<div class="products__info-bottom"><a href="#" class="products__buy-btn">В корзину</a>
+													<div class="products__availability">В наличии</div>
+												</div>
+											</div>
+										</div>
+									</li>
+									<li class="products__item">
+										<div class="products__item-inner">
+											<div class="products__left">
+												<div class="products__slideshow">
+													<div class="products__slideshow-block"><a href="#" class="products__slideshow-display"><img src="img/telephone/shop_40.png" alt="" class="products__slideshow-img"></a>
+														<ul class="products__slideshow-thumbs">
+															<li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="img/telephone/shop_41.png" alt="" class="products__slideshow-thumb-img"></a></li>
+															<li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="img/telephone/shop_42.png" alt="" class="products__slideshow-thumb-img"></a></li>
+															<li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="img/telephone/shop_43.png" alt="" class="products__slideshow-thumb-img"></a></li>
+														</ul>
+													</div>
+													<div class="products__article">
+														<div class="products__article-word">Артикул</div>
+														<div class="products__article-num">387228</div>
+													</div>
+												</div>
+												<div class="products__desc">
+													<div class="products__desc-title">Microsoft Lumia 430 RM-10</div>
+													<ul class="products__desc-options">
+														<li class="products__option-item products__option-item_colored">
+															<div class="products__option-key">Тип SIM-карты</div>
+															<div class="products__option-value">Micro-SIM</div>
+														</li>
+														<li class="products__option-item">
+															<div class="products__option-key">Количество SIM-карт</div>
+															<div class="products__option-value">2</div>
+														</li>
+														<li class="products__option-item products__option-item_colored">
+															<div class="products__option-key">Цвет</div>
+															<div class="products__option-value">Чёрный</div>
+														</li>
+														<li class="products__option-item">
+															<div class="products__option-key">ОC</div>
+															<div class="products__option-value">Windows Phone</div>
+														</li>
+														<li class="products__option-item products__option-item_colored">
+															<div class="products__option-key">Связь 3G</div>
+															<div class="products__option-value">Есть</div>
+														</li>
+														<li class="products__option-item">
+															<div class="products__option-key">4G (LTE)</div>
+															<div class="products__option-value">Нет</div>
+														</li>
+														<li class="products__option-item products__option-item_colored">
+															<div class="products__option-key">GPS-модуль</div>
+															<div class="products__option-value">A-GPS</div>
+														</li>
+													</ul>
+													<div data-rating='4' class="products__rating"></div>
+												</div>
+											</div>
+											<div class="products__right">
+												<div class="products__info">
+													<div class="products__price">5 390<i class="rub"></i></div>
+												</div>
+												<div class="products__info-bottom"><a href="#" class="products__buy-btn">В корзину</a>
+													<div class="products__availability">В наличии</div>
+												</div>
+											</div>
+										</div>
+									</li>
+									<li class="products__item">
+										<div class="products__item-inner">
+											<div class="products__left">
+												<div class="products__slideshow">
+													<div class="products__slideshow-block"><a href="#" class="products__slideshow-display"><img src="img/telephone/shop_50.png" alt="" class="products__slideshow-img"></a>
+														<ul class="products__slideshow-thumbs">
+															<li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="img/telephone/shop_51.png" alt="" class="products__slideshow-thumb-img"></a></li>
+															<li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="img/telephone/shop_52.png" alt="" class="products__slideshow-thumb-img"></a></li>
+															<li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="img/telephone/shop_53.png" alt="" class="products__slideshow-thumb-img"></a></li>
+														</ul>
+													</div>
+													<div class="products__article">
+														<div class="products__article-word">Артикул</div>
+														<div class="products__article-num">359110</div>
+													</div>
+												</div>
+												<div class="products__desc">
+													<div class="products__desc-title">Senseit L301 Black</div>
+													<ul class="products__desc-options">
+														<li class="products__option-item products__option-item_colored">
+															<div class="products__option-key">Тип SIM-карты</div>
+															<div class="products__option-value">Micro-SIM</div>
+														</li>
+														<li class="products__option-item">
+															<div class="products__option-key">Количество SIM-карт</div>
+															<div class="products__option-value">2</div>
+														</li>
+														<li class="products__option-item products__option-item_colored">
+															<div class="products__option-key">Цвет</div>
+															<div class="products__option-value">Чёрный</div>
+														</li>
+														<li class="products__option-item">
+															<div class="products__option-key">ОC</div>
+															<div class="products__option-value">Android</div>
+														</li>
+														<li class="products__option-item products__option-item_colored">
+															<div class="products__option-key">Связь 3G</div>
+															<div class="products__option-value">Есть</div>
+														</li>
+														<li class="products__option-item">
+															<div class="products__option-key">4G (LTE)</div>
+															<div class="products__option-value">Нет</div>
+														</li>
+														<li class="products__option-item products__option-item_colored">
+															<div class="products__option-key">GPS-модуль</div>
+															<div class="products__option-value">Есть</div>
+														</li>
+													</ul>
+													<div data-rating='4' class="products__rating"></div>
+												</div>
+											</div>
+											<div class="products__right">
+												<div class="products__info">
+													<div class="products__price">4 990<i class="rub"></i></div>
+												</div>
+												<div class="products__info-bottom"><a href="#" class="products__buy-btn">В корзину</a>
+													<div class="products__availability">В наличии</div>
+												</div>
+											</div>
+										</div>
+									</li>
+									<li class="products__item">
+										<div class="products__item-inner">
+											<div class="products__left">
+												<div class="products__slideshow">
+													<div class="products__slideshow-block"><a href="#" class="products__slideshow-display"><img src="img/telephone/shop_60.png" alt="" class="products__slideshow-img"></a>
+														<ul class="products__slideshow-thumbs">
+															<li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="img/telephone/shop_61.png" alt="" class="products__slideshow-thumb-img"></a></li>
+															<li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="img/telephone/shop_62.png" alt="" class="products__slideshow-thumb-img"></a></li>
+															<li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="img/telephone/shop_63.png" alt="" class="products__slideshow-thumb-img"></a></li>
+														</ul>
+													</div>
+													<div class="products__article">
+														<div class="products__article-word">Артикул</div>
+														<div class="products__article-num">422105</div>
+													</div>
+												</div>
+												<div class="products__desc">
+													<div class="products__desc-title">HIGHSCREEN WinWin Black</div>
+													<ul class="products__desc-options">
+														<li class="products__option-item products__option-item_colored">
+															<div class="products__option-key">Тип SIM-карты</div>
+															<div class="products__option-value">Micro-SIM</div>
+														</li>
+														<li class="products__option-item">
+															<div class="products__option-key">Количество SIM-карт</div>
+															<div class="products__option-value">2</div>
+														</li>
+														<li class="products__option-item products__option-item_colored">
+															<div class="products__option-key">Цвет</div>
+															<div class="products__option-value">Чёрный</div>
+														</li>
+														<li class="products__option-item">
+															<div class="products__option-key">ОC</div>
+															<div class="products__option-value">Windows Phone</div>
+														</li>
+														<li class="products__option-item products__option-item_colored">
+															<div class="products__option-key">Связь 3G</div>
+															<div class="products__option-value">Есть</div>
+														</li>
+														<li class="products__option-item">
+															<div class="products__option-key">4G (LTE)</div>
+															<div class="products__option-value">Нет</div>
+														</li>
+														<li class="products__option-item products__option-item_colored">
+															<div class="products__option-key">GPS-модуль</div>
+															<div class="products__option-value">Есть</div>
+														</li>
+													</ul>
+													<div data-rating='4' class="products__rating"></div>
+												</div>
+											</div>
+											<div class="products__right">
+												<div class="products__info">
+													<div class="products__price">3 990<i class="rub"></i></div>
+												</div>
+												<div class="products__info-bottom"><a href="#" class="products__buy-btn">В корзину</a>
+													<div class="products__availability">В наличии</div>
+												</div>
+											</div>
+										</div>
+									</li>
+									<li class="products__item">
+										<div class="products__item-inner">
+											<div class="products__left">
+												<div class="products__slideshow">
+													<div class="products__slideshow-block"><a href="#" class="products__slideshow-display"><img src="img/telephone/shop_70.png" alt="" class="products__slideshow-img"></a>
+														<ul class="products__slideshow-thumbs">
+															<li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="img/telephone/shop_71.png" alt="" class="products__slideshow-thumb-img"></a></li>
+															<li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="img/telephone/shop_72.png" alt="" class="products__slideshow-thumb-img"></a></li>
+															<li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="img/telephone/shop_73.png" alt="" class="products__slideshow-thumb-img"></a></li>
+														</ul>
+													</div>
+													<div class="products__article">
+														<div class="products__article-word">Артикул</div>
+														<div class="products__article-num">112234</div>
+													</div>
+												</div>
+												<div class="products__desc">
+													<div class="products__desc-title">Alcatel OT4013D PIXI 3(2 SIM)</div>
+													<ul class="products__desc-options">
+														<li class="products__option-item products__option-item_colored">
+															<div class="products__option-key">Тип SIM-карты</div>
+															<div class="products__option-value">Micro-SIM</div>
+														</li>
+														<li class="products__option-item">
+															<div class="products__option-key">Количество SIM-карт</div>
+															<div class="products__option-value">2</div>
+														</li>
+														<li class="products__option-item products__option-item_colored">
+															<div class="products__option-key">Цвет</div>
+															<div class="products__option-value">Белый</div>
+														</li>
+														<li class="products__option-item">
+															<div class="products__option-key">ОC</div>
+															<div class="products__option-value">Android</div>
+														</li>
+														<li class="products__option-item products__option-item_colored">
+															<div class="products__option-key">Связь 3G</div>
+															<div class="products__option-value">Есть</div>
+														</li>
+														<li class="products__option-item">
+															<div class="products__option-key">4G (LTE)</div>
+															<div class="products__option-value">Нет</div>
+														</li>
+														<li class="products__option-item products__option-item_colored">
+															<div class="products__option-key">GPS-модуль</div>
+															<div class="products__option-value">A-GPS</div>
+														</li>
+													</ul>
+													<div data-rating='4' class="products__rating"></div>
+												</div>
+											</div>
+											<div class="products__right">
+												<div class="products__info">
+													<div class="products__price">3 290<i class="rub"></i></div>
+												</div>
+												<div class="products__info-bottom"><a href="#" class="products__buy-btn">В корзину</a>
+													<div class="products__availability">В наличии</div>
+												</div>
+											</div>
+										</div>
+									</li>
+									<li class="products__item">
+										<div class="products__item-inner">
+											<div class="products__left">
+												<div class="products__slideshow">
+													<div class="products__slideshow-block"><a href="#" class="products__slideshow-display"><img src="img/telephone/shop_80.png" alt="" class="products__slideshow-img"></a>
+														<ul class="products__slideshow-thumbs">
+															<li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="img/telephone/shop_81.png" alt="" class="products__slideshow-thumb-img"></a></li>
+															<li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="img/telephone/shop_82.png" alt="" class="products__slideshow-thumb-img"></a></li>
+															<li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="img/telephone/shop_83.png" alt="" class="products__slideshow-thumb-img"></a></li>
+														</ul>
+													</div>
+													<div class="products__article">
+														<div class="products__article-word">Артикул</div>
+														<div class="products__article-num">187537</div>
+													</div>
+												</div>
+												<div class="products__desc">
+													<div class="products__desc-title">Fly IQ434 Era Nano 5</div>
+													<ul class="products__desc-options">
+														<li class="products__option-item products__option-item_colored">
+															<div class="products__option-key">Тип SIM-карты</div>
+															<div class="products__option-value">Micro-SIM</div>
+														</li>
+														<li class="products__option-item">
+															<div class="products__option-key">Количество SIM-карт</div>
+															<div class="products__option-value">2</div>
+														</li>
+														<li class="products__option-item products__option-item_colored">
+															<div class="products__option-key">Цвет</div>
+															<div class="products__option-value">Чёрный</div>
+														</li>
+														<li class="products__option-item">
+															<div class="products__option-key">ОC</div>
+															<div class="products__option-value">Android</div>
+														</li>
+														<li class="products__option-item products__option-item_colored">
+															<div class="products__option-key">Связь 3G</div>
+															<div class="products__option-value">Нет</div>
+														</li>
+														<li class="products__option-item">
+															<div class="products__option-key">4G (LTE)</div>
+															<div class="products__option-value">Нет</div>
+														</li>
+														<li class="products__option-item products__option-item_colored">
+															<div class="products__option-key">GPS-модуль</div>
+															<div class="products__option-value">Нет</div>
+														</li>
+													</ul>
+													<div data-rating='4' class="products__rating"></div>
+												</div>
+											</div>
+											<div class="products__right">
+												<div class="products__info">
+													<div class="products__price">1 790<i class="rub"></i></div>
+												</div>
+												<div class="products__info-bottom"><a href="#" class="products__buy-btn">В корзину</a>
+													<div class="products__availability">В наличии</div>
+												</div>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+							<div class="pagination">
+								<ul class="pagination__list">
+									<li class="pagination__item pagination__item_prev"><a href="#" class="pagination__link">
+											<div class="pagination__mark"></div></a></li>
+									<li class="pagination__item"><a href="#" class="pagination__link">
+											<div class="pagination__mark">1</div></a></li>
+									<li class="pagination__item"><a href="#" class="pagination__link">
+											<div class="pagination__mark">2</div></a></li>
+									<li class="pagination__item"><a href="#" class="pagination__link">
+											<div class="pagination__mark">3</div></a></li>
+									<li class="pagination__item pagination__item_next"><a href="#" class="pagination__link">
+											<div class="pagination__mark"></div></a></li>
+								</ul>
+							</div>
 						</div>
-					</sidebar>
-					<div class="sort-bar">
-						<form class="sort-bar__form-sort"><span class="sort-bar__form-sort__text">Сортировать по</span>
-							<select id="select-bar" size="1" class="sort-bar__select">
-								<option id="price" class="sort-bar__option">По цене</option>
-								<option id="rating" class="sort-bar__option">По рейтингу</option>
-							</select>
-						</form>
-						<ul class="sort-bar__list"><span class="sort-bar__list__text">Вид каталога</span>
-							<li id="list-1" class="sort-bar__item sort-bar__item_1 sort-bar__item_1_active"></li>
-							<li id="list-2" class="sort-bar__item sort-bar__item_2"></li>
-							<li id="list-3" class="sort-bar__item sort-bar__item_3"></li>
-						</ul>
 					</div>
-					<div class="content-page">
-						<div id="var" class="var-1">
-							<ul class="content-page__list">
-								<li class="contetn-page__item">
-									<div class="wrapper-inner">
-										<div class="wrapper-inner__gallery wrapper-inner__gallery_1"><a class="main-pick main-pick-1"><img src="img/phones/phone_1.png" alt=" " class="gallery__img image-gallery"></a>
-											<ul class="slider__list">
-												<li class="slider__item">
-													<li class="slider__item"><a class=" min-pick min-pick_1 min-pick-1_1"><img src="img/phones/phone_1.png" alt="" class="image-gallery_min"></a></li>
-													<li class="slider__item"><a class=" min-pick min-pick_2 min-pick-1_2"><img src="img/phones/phone_1_min_2.png" alt="" class="image-gallery_min"></a></li>
-													<li class="slider__item"><a class=" min-pick min-pick_3  min-pick-1_3"><img src="img/phones/phone_1_min_3.png" alt="" class="image-gallery_min"></a></li>
-												</li>
-											</ul>
-										</div>
-										<p class="wrapper-inner__article">Артикл<span class="wrapper-inner__article_number"> &#160 1</span>
-										</p>
-										<p class="wrapper-inner__name">Samsung GT-193011 GALAXY S 3</p>
-										<div class="about"><span class="about_text">Смартфон Samsung GT-I9301I GALAXY S 3 Ceramic White Моноблок, Micro-SIM, Android 4.4, 3G, Bluetooth 4.0, EDGE, GPRS, WAP, Wi-Fi, Количество ядер процессора 4, Частота процессора 1400 МГц...</span></div>
-										<ul class="characteristics">
-											<li class="characteristics__item"><span class="charecteristics__what">Тип SIM-карты &#160</span><span class="charecteristics__this">Micro-SIM</span><span class="charecteristics__comma">,&#160</span></li>
-											<li class="characteristics__item"><span class="charecteristics__what">Количество SIM-карт &#160</span><span class="charecteristics__this">1</span><span class="charecteristics__comma">,&#160</span></li>
-											<li class="characteristics__item"><span class="charecteristics__what">Цвет &#160</span><span class="charecteristics__this">Белый</span><span class="charecteristics__comma">,&#160</span></li>
-											<li class="characteristics__item"><span class="charecteristics__what">ОС &#160</span><span class="charecteristics__this">Android</span><span class="charecteristics__comma">,&#160</span></li>
-											<li class="characteristics__item"><span class="charecteristics__what">Связь 3G &#160</span><span class="charecteristics__this">Есть</span><span class="charecteristics__comma">,&#160</span></li>
-											<li class="characteristics__item"><span class="charecteristics__what">4G(LTE) &#160</span><span class="charecteristics__this">Нет</span><span class="charecteristics__comma">,&#160</span></li>
-											<li class="characteristics__item"><span class="charecteristics__what">GPS-модуль &#160</span><span class="charecteristics__this">Есть</span><span class="charecteristics__comma">&#160 ...</span></li>
-										</ul>
-										<div class="wrapper-inner__rating"><a class="rating_image"></a><span class="rating-result">4</span></div>
-										<div class="wrap-price">
-											<p class="wrapper-inner__price">11 290 ₽</p>
-											<button class="wrapper-inner__button">В корзину</button>
-											<div class="wrapper-inner__avail"><span class="avail__text">В наличии</span></div>
-										</div>
-									</div>
-								</li>
-								<li class="contetn-page__item">
-									<div class="wrapper-inner">
-										<div class="wrapper-inner__gallery wrapper-inner__gallery_2"><a class="main-pick main-pick-2"><img src="img/phones/phone_2.png" alt=" " class="gallery__img image-gallery"></a>
-											<ul class="slider__list">
-												<li class="slider__item">
-													<li class="slider__item"><a class=" min-pick min-pick_1 min-pick-2_1"><img src="img/phones/phone_2.png" alt="" class="image-gallery_min"></a></li>
-													<li class="slider__item"><a class=" min-pick min-pick_2 min-pick-2_2"><img src="img/phones/phone_2_min_2.png" alt="" class="image-gallery_min"></a></li>
-													<li class="slider__item"><a class=" min-pick min-pick_3  min-pick-2_3"><img src="img/phones/phone_2_min_3.png" alt="" class="image-gallery_min"></a></li>
-												</li>
-											</ul>
-										</div>
-										<p class="wrapper-inner__article">Артикл<span class="wrapper-inner__article_number"> &#160 2</span>
-										</p>
-										<p class="wrapper-inner__name">Samsung GT-193011 GALAXY S 3</p>
-										<div class="about"><span class="about_text">Смартфон Samsung GT-I9301I GALAXY S 3 Ceramic White Моноблок, Micro-SIM, Android 4.4, 3G, Bluetooth 4.0, EDGE, GPRS, WAP, Wi-Fi, Количество ядер процессора 4, Частота процессора 1400 МГц...</span></div>
-										<ul class="characteristics">
-											<li class="characteristics__item"><span class="charecteristics__what">Тип SIM-карты &#160</span><span class="charecteristics__this">Micro-SIM</span><span class="charecteristics__comma">,&#160</span></li>
-											<li class="characteristics__item"><span class="charecteristics__what">Количество SIM-карт &#160</span><span class="charecteristics__this">1</span><span class="charecteristics__comma">,&#160</span></li>
-											<li class="characteristics__item"><span class="charecteristics__what">Цвет &#160</span><span class="charecteristics__this">Белый</span><span class="charecteristics__comma">,&#160</span></li>
-											<li class="characteristics__item"><span class="charecteristics__what">ОС &#160</span><span class="charecteristics__this">Android</span><span class="charecteristics__comma">,&#160</span></li>
-											<li class="characteristics__item"><span class="charecteristics__what">Связь 3G &#160</span><span class="charecteristics__this">Есть</span><span class="charecteristics__comma">,&#160</span></li>
-											<li class="characteristics__item"><span class="charecteristics__what">4G(LTE) &#160</span><span class="charecteristics__this">Нет</span><span class="charecteristics__comma">,&#160</span></li>
-											<li class="characteristics__item"><span class="charecteristics__what">GPS-модуль &#160</span><span class="charecteristics__this">Есть</span><span class="charecteristics__comma">&#160 ...</span></li>
-										</ul>
-										<div class="wrapper-inner__rating"><a class="rating_image"></a><span class="rating-result">4</span></div>
-										<div class="wrap-price">
-											<p class="wrapper-inner__price">11 290 ₽</p>
-											<button class="wrapper-inner__button">В корзину</button>
-											<div class="wrapper-inner__avail"><span class="avail__text">В наличии</span></div>
-										</div>
-									</div>
-								</li>
-								<li class="contetn-page__item">
-									<div class="wrapper-inner">
-										<div class="wrapper-inner__gallery wrapper-inner__gallery_3"><a class="main-pick main-pick-3"><img src="img/phones/phone_3.png" alt=" " class="gallery__img image-gallery"></a>
-											<ul class="slider__list">
-												<li class="slider__item">
-													<li class="slider__item"><a class=" min-pick min-pick_1 min-pick-3_1"><img src="img/phones/phone_3.png" alt="" class="image-gallery_min"></a></li>
-													<li class="slider__item"><a class=" min-pick min-pick_2 min-pick-3_2"><img src="img/phones/phone_3_min_2.png" alt="" class="image-gallery_min"></a></li>
-													<li class="slider__item"><a class=" min-pick min-pick_3  min-pick-3_3"><img src="img/phones/phone_3_min_3.png" alt="" class="image-gallery_min"></a></li>
-												</li>
-											</ul>
-										</div>
-										<p class="wrapper-inner__article">Артикл<span class="wrapper-inner__article_number"> &#160 3</span>
-										</p>
-										<p class="wrapper-inner__name">Samsung GT-193011 GALAXY S 3</p>
-										<div class="about"><span class="about_text">Смартфон Samsung GT-I9301I GALAXY S 3 Ceramic White Моноблок, Micro-SIM, Android 4.4, 3G, Bluetooth 4.0, EDGE, GPRS, WAP, Wi-Fi, Количество ядер процессора 4, Частота процессора 1400 МГц...</span></div>
-										<ul class="characteristics">
-											<li class="characteristics__item"><span class="charecteristics__what">Тип SIM-карты &#160</span><span class="charecteristics__this">Micro-SIM</span><span class="charecteristics__comma">,&#160</span></li>
-											<li class="characteristics__item"><span class="charecteristics__what">Количество SIM-карт &#160</span><span class="charecteristics__this">1</span><span class="charecteristics__comma">,&#160</span></li>
-											<li class="characteristics__item"><span class="charecteristics__what">Цвет &#160</span><span class="charecteristics__this">Белый</span><span class="charecteristics__comma">,&#160</span></li>
-											<li class="characteristics__item"><span class="charecteristics__what">ОС &#160</span><span class="charecteristics__this">Android</span><span class="charecteristics__comma">,&#160</span></li>
-											<li class="characteristics__item"><span class="charecteristics__what">Связь 3G &#160</span><span class="charecteristics__this">Есть</span><span class="charecteristics__comma">,&#160</span></li>
-											<li class="characteristics__item"><span class="charecteristics__what">4G(LTE) &#160</span><span class="charecteristics__this">Нет</span><span class="charecteristics__comma">,&#160</span></li>
-											<li class="characteristics__item"><span class="charecteristics__what">GPS-модуль &#160</span><span class="charecteristics__this">Есть</span><span class="charecteristics__comma">&#160 ...</span></li>
-										</ul>
-										<div class="wrapper-inner__rating"><a class="rating_image"></a><span class="rating-result">4</span></div>
-										<div class="wrap-price">
-											<p class="wrapper-inner__price">11 290 ₽</p>
-											<button class="wrapper-inner__button">В корзину</button>
-											<div class="wrapper-inner__avail"><span class="avail__text">В наличии</span></div>
-										</div>
-									</div>
-								</li>
-								<li class="contetn-page__item">
-									<div class="wrapper-inner">
-										<div class="wrapper-inner__gallery wrapper-inner__gallery_4"><a class="main-pick main-pick-4"><img src="img/phones/phone_4.png" alt=" " class="gallery__img image-gallery"></a>
-											<ul class="slider__list">
-												<li class="slider__item">
-													<li class="slider__item"><a class=" min-pick min-pick_1 min-pick-4_1"><img src="img/phones/phone_4.png" alt="" class="image-gallery_min"></a></li>
-													<li class="slider__item"><a class=" min-pick min-pick_2 min-pick-4_2"><img src="img/phones/phone_4_min_2.png" alt="" class="image-gallery_min"></a></li>
-													<li class="slider__item"><a class=" min-pick min-pick_3  min-pick-4_3"><img src="img/phones/phone_4_min_3.png" alt="" class="image-gallery_min"></a></li>
-												</li>
-											</ul>
-										</div>
-										<p class="wrapper-inner__article">Артикл<span class="wrapper-inner__article_number"> &#160 4</span>
-										</p>
-										<p class="wrapper-inner__name">Samsung GT-193011 GALAXY S 3</p>
-										<div class="about"><span class="about_text">Смартфон Samsung GT-I9301I GALAXY S 3 Ceramic White Моноблок, Micro-SIM, Android 4.4, 3G, Bluetooth 4.0, EDGE, GPRS, WAP, Wi-Fi, Количество ядер процессора 4, Частота процессора 1400 МГц...</span></div>
-										<ul class="characteristics">
-											<li class="characteristics__item"><span class="charecteristics__what">Тип SIM-карты &#160</span><span class="charecteristics__this">Micro-SIM</span><span class="charecteristics__comma">,&#160</span></li>
-											<li class="characteristics__item"><span class="charecteristics__what">Количество SIM-карт &#160</span><span class="charecteristics__this">1</span><span class="charecteristics__comma">,&#160</span></li>
-											<li class="characteristics__item"><span class="charecteristics__what">Цвет &#160</span><span class="charecteristics__this">Белый</span><span class="charecteristics__comma">,&#160</span></li>
-											<li class="characteristics__item"><span class="charecteristics__what">ОС &#160</span><span class="charecteristics__this">Android</span><span class="charecteristics__comma">,&#160</span></li>
-											<li class="characteristics__item"><span class="charecteristics__what">Связь 3G &#160</span><span class="charecteristics__this">Есть</span><span class="charecteristics__comma">,&#160</span></li>
-											<li class="characteristics__item"><span class="charecteristics__what">4G(LTE) &#160</span><span class="charecteristics__this">Нет</span><span class="charecteristics__comma">,&#160</span></li>
-											<li class="characteristics__item"><span class="charecteristics__what">GPS-модуль &#160</span><span class="charecteristics__this">Есть</span><span class="charecteristics__comma">&#160 ...</span></li>
-										</ul>
-										<div class="wrapper-inner__rating"><a class="rating_image"></a><span class="rating-result">4</span></div>
-										<div class="wrap-price">
-											<p class="wrapper-inner__price">11 290 ₽</p>
-											<button class="wrapper-inner__button">В корзину</button>
-											<div class="wrapper-inner__avail"><span class="avail__text">В наличии</span></div>
-										</div>
-									</div>
-								</li>
-								<li class="contetn-page__item">
-									<div class="wrapper-inner">
-										<div class="wrapper-inner__gallery wrapper-inner__gallery_5"><a class="main-pick main-pick-5"><img src="img/phones/phone_5.png" alt=" " class="gallery__img image-gallery"></a>
-											<ul class="slider__list">
-												<li class="slider__item">
-													<li class="slider__item"><a class=" min-pick min-pick_1 min-pick-5_1"><img src="img/phones/phone_5.png" alt="" class="image-gallery_min"></a></li>
-													<li class="slider__item"><a class=" min-pick min-pick_2 min-pick-5_2"><img src="img/phones/phone_5_min_2.png" alt="" class="image-gallery_min"></a></li>
-													<li class="slider__item"><a class=" min-pick min-pick_3  min-pick-5_3"><img src="img/phones/phone_5_min_3.png" alt="" class="image-gallery_min"></a></li>
-												</li>
-											</ul>
-										</div>
-										<p class="wrapper-inner__article">Артикл<span class="wrapper-inner__article_number"> &#160 5</span>
-										</p>
-										<p class="wrapper-inner__name">Samsung GT-193011 GALAXY S 3</p>
-										<div class="about"><span class="about_text">Смартфон Samsung GT-I9301I GALAXY S 3 Ceramic White Моноблок, Micro-SIM, Android 4.4, 3G, Bluetooth 4.0, EDGE, GPRS, WAP, Wi-Fi, Количество ядер процессора 4, Частота процессора 1400 МГц...</span></div>
-										<ul class="characteristics">
-											<li class="characteristics__item"><span class="charecteristics__what">Тип SIM-карты &#160</span><span class="charecteristics__this">Micro-SIM</span><span class="charecteristics__comma">,&#160</span></li>
-											<li class="characteristics__item"><span class="charecteristics__what">Количество SIM-карт &#160</span><span class="charecteristics__this">1</span><span class="charecteristics__comma">,&#160</span></li>
-											<li class="characteristics__item"><span class="charecteristics__what">Цвет &#160</span><span class="charecteristics__this">Белый</span><span class="charecteristics__comma">,&#160</span></li>
-											<li class="characteristics__item"><span class="charecteristics__what">ОС &#160</span><span class="charecteristics__this">Android</span><span class="charecteristics__comma">,&#160</span></li>
-											<li class="characteristics__item"><span class="charecteristics__what">Связь 3G &#160</span><span class="charecteristics__this">Есть</span><span class="charecteristics__comma">,&#160</span></li>
-											<li class="characteristics__item"><span class="charecteristics__what">4G(LTE) &#160</span><span class="charecteristics__this">Нет</span><span class="charecteristics__comma">,&#160</span></li>
-											<li class="characteristics__item"><span class="charecteristics__what">GPS-модуль &#160</span><span class="charecteristics__this">Есть</span><span class="charecteristics__comma">&#160 ...</span></li>
-										</ul>
-										<div class="wrapper-inner__rating"><a class="rating_image"></a><span class="rating-result">4</span></div>
-										<div class="wrap-price">
-											<p class="wrapper-inner__price">11 290 ₽</p>
-											<button class="wrapper-inner__button">В корзину</button>
-											<div class="wrapper-inner__avail"><span class="avail__text">В наличии</span></div>
-										</div>
-									</div>
-								</li>
-								<li class="contetn-page__item">
-									<div class="wrapper-inner">
-										<div class="wrapper-inner__gallery wrapper-inner__gallery_6"><a class="main-pick main-pick-6"><img src="img/phones/phone_6.png" alt=" " class="gallery__img image-gallery"></a>
-											<ul class="slider__list">
-												<li class="slider__item">
-													<li class="slider__item"><a class=" min-pick min-pick_1 min-pick-6_1"><img src="img/phones/phone_6.png" alt="" class="image-gallery_min"></a></li>
-													<li class="slider__item"><a class=" min-pick min-pick_2 min-pick-6_2"><img src="img/phones/phone_6_min_2.png" alt="" class="image-gallery_min"></a></li>
-													<li class="slider__item"><a class=" min-pick min-pick_3  min-pick-6_3"><img src="img/phones/phone_6_min_3.png" alt="" class="image-gallery_min"></a></li>
-												</li>
-											</ul>
-										</div>
-										<p class="wrapper-inner__article">Артикл<span class="wrapper-inner__article_number"> &#160 6</span>
-										</p>
-										<p class="wrapper-inner__name">Samsung GT-193011 GALAXY S 3</p>
-										<div class="about"><span class="about_text">Смартфон Samsung GT-I9301I GALAXY S 3 Ceramic White Моноблок, Micro-SIM, Android 4.4, 3G, Bluetooth 4.0, EDGE, GPRS, WAP, Wi-Fi, Количество ядер процессора 4, Частота процессора 1400 МГц...</span></div>
-										<ul class="characteristics">
-											<li class="characteristics__item"><span class="charecteristics__what">Тип SIM-карты &#160</span><span class="charecteristics__this">Micro-SIM</span><span class="charecteristics__comma">,&#160</span></li>
-											<li class="characteristics__item"><span class="charecteristics__what">Количество SIM-карт &#160</span><span class="charecteristics__this">1</span><span class="charecteristics__comma">,&#160</span></li>
-											<li class="characteristics__item"><span class="charecteristics__what">Цвет &#160</span><span class="charecteristics__this">Белый</span><span class="charecteristics__comma">,&#160</span></li>
-											<li class="characteristics__item"><span class="charecteristics__what">ОС &#160</span><span class="charecteristics__this">Android</span><span class="charecteristics__comma">,&#160</span></li>
-											<li class="characteristics__item"><span class="charecteristics__what">Связь 3G &#160</span><span class="charecteristics__this">Есть</span><span class="charecteristics__comma">,&#160</span></li>
-											<li class="characteristics__item"><span class="charecteristics__what">4G(LTE) &#160</span><span class="charecteristics__this">Нет</span><span class="charecteristics__comma">,&#160</span></li>
-											<li class="characteristics__item"><span class="charecteristics__what">GPS-модуль &#160</span><span class="charecteristics__this">Есть</span><span class="charecteristics__comma">&#160 ...</span></li>
-										</ul>
-										<div class="wrapper-inner__rating"><a class="rating_image"></a><span class="rating-result">4</span></div>
-										<div class="wrap-price">
-											<p class="wrapper-inner__price">11 290 ₽</p>
-											<button class="wrapper-inner__button">В корзину</button>
-											<div class="wrapper-inner__avail"><span class="avail__text">В наличии</span></div>
-										</div>
-									</div>
-								</li>
-								<li class="contetn-page__item">
-									<div class="wrapper-inner">
-										<div class="wrapper-inner__gallery wrapper-inner__gallery_7"><a class="main-pick main-pick-7"><img src="img/phones/phone_7.png" alt=" " class="gallery__img image-gallery"></a>
-											<ul class="slider__list">
-												<li class="slider__item">
-													<li class="slider__item"><a class=" min-pick min-pick_1 min-pick-7_1"><img src="img/phones/phone_7.png" alt="" class="image-gallery_min"></a></li>
-													<li class="slider__item"><a class=" min-pick min-pick_2 min-pick-7_2"><img src="img/phones/phone_7_min_2.png" alt="" class="image-gallery_min"></a></li>
-													<li class="slider__item"><a class=" min-pick min-pick_3  min-pick-7_3"><img src="img/phones/phone_7_min_3.png" alt="" class="image-gallery_min"></a></li>
-												</li>
-											</ul>
-										</div>
-										<p class="wrapper-inner__article">Артикл<span class="wrapper-inner__article_number"> &#160 7</span>
-										</p>
-										<p class="wrapper-inner__name">Samsung GT-193011 GALAXY S 3</p>
-										<div class="about"><span class="about_text">Смартфон Samsung GT-I9301I GALAXY S 3 Ceramic White Моноблок, Micro-SIM, Android 4.4, 3G, Bluetooth 4.0, EDGE, GPRS, WAP, Wi-Fi, Количество ядер процессора 4, Частота процессора 1400 МГц...</span></div>
-										<ul class="characteristics">
-											<li class="characteristics__item"><span class="charecteristics__what">Тип SIM-карты &#160</span><span class="charecteristics__this">Micro-SIM</span><span class="charecteristics__comma">,&#160</span></li>
-											<li class="characteristics__item"><span class="charecteristics__what">Количество SIM-карт &#160</span><span class="charecteristics__this">1</span><span class="charecteristics__comma">,&#160</span></li>
-											<li class="characteristics__item"><span class="charecteristics__what">Цвет &#160</span><span class="charecteristics__this">Белый</span><span class="charecteristics__comma">,&#160</span></li>
-											<li class="characteristics__item"><span class="charecteristics__what">ОС &#160</span><span class="charecteristics__this">Android</span><span class="charecteristics__comma">,&#160</span></li>
-											<li class="characteristics__item"><span class="charecteristics__what">Связь 3G &#160</span><span class="charecteristics__this">Есть</span><span class="charecteristics__comma">,&#160</span></li>
-											<li class="characteristics__item"><span class="charecteristics__what">4G(LTE) &#160</span><span class="charecteristics__this">Нет</span><span class="charecteristics__comma">,&#160</span></li>
-											<li class="characteristics__item"><span class="charecteristics__what">GPS-модуль &#160</span><span class="charecteristics__this">Есть</span><span class="charecteristics__comma">&#160 ...</span></li>
-										</ul>
-										<div class="wrapper-inner__rating"><a class="rating_image"></a><span class="rating-result">4</span></div>
-										<div class="wrap-price">
-											<p class="wrapper-inner__price">11 290 ₽</p>
-											<button class="wrapper-inner__button">В корзину</button>
-											<div class="wrapper-inner__avail"><span class="avail__text">В наличии</span></div>
-										</div>
-									</div>
-								</li>
-								<li class="contetn-page__item">
-									<div class="wrapper-inner">
-										<div class="wrapper-inner__gallery wrapper-inner__gallery_8"><a class="main-pick main-pick-8"><img src="img/phones/phone_8.png" alt=" " class="gallery__img image-gallery"></a>
-											<ul class="slider__list">
-												<li class="slider__item">
-													<li class="slider__item"><a class=" min-pick min-pick_1 min-pick-8_1"><img src="img/phones/phone_8.png" alt="" class="image-gallery_min"></a></li>
-													<li class="slider__item"><a class=" min-pick min-pick_2 min-pick-8_2"><img src="img/phones/phone_8_min_2.png" alt="" class="image-gallery_min"></a></li>
-													<li class="slider__item"><a class=" min-pick min-pick_3  min-pick-8_3"><img src="img/phones/phone_8_min_3.png" alt="" class="image-gallery_min"></a></li>
-												</li>
-											</ul>
-										</div>
-										<p class="wrapper-inner__article">Артикл<span class="wrapper-inner__article_number"> &#160 8</span>
-										</p>
-										<p class="wrapper-inner__name">Samsung GT-193011 GALAXY S 3</p>
-										<div class="about"><span class="about_text">Смартфон Samsung GT-I9301I GALAXY S 3 Ceramic White Моноблок, Micro-SIM, Android 4.4, 3G, Bluetooth 4.0, EDGE, GPRS, WAP, Wi-Fi, Количество ядер процессора 4, Частота процессора 1400 МГц...</span></div>
-										<ul class="characteristics">
-											<li class="characteristics__item"><span class="charecteristics__what">Тип SIM-карты &#160</span><span class="charecteristics__this">Micro-SIM</span><span class="charecteristics__comma">,&#160</span></li>
-											<li class="characteristics__item"><span class="charecteristics__what">Количество SIM-карт &#160</span><span class="charecteristics__this">1</span><span class="charecteristics__comma">,&#160</span></li>
-											<li class="characteristics__item"><span class="charecteristics__what">Цвет &#160</span><span class="charecteristics__this">Белый</span><span class="charecteristics__comma">,&#160</span></li>
-											<li class="characteristics__item"><span class="charecteristics__what">ОС &#160</span><span class="charecteristics__this">Android</span><span class="charecteristics__comma">,&#160</span></li>
-											<li class="characteristics__item"><span class="charecteristics__what">Связь 3G &#160</span><span class="charecteristics__this">Есть</span><span class="charecteristics__comma">,&#160</span></li>
-											<li class="characteristics__item"><span class="charecteristics__what">4G(LTE) &#160</span><span class="charecteristics__this">Нет</span><span class="charecteristics__comma">,&#160</span></li>
-											<li class="characteristics__item"><span class="charecteristics__what">GPS-модуль &#160</span><span class="charecteristics__this">Есть</span><span class="charecteristics__comma">&#160 ...</span></li>
-										</ul>
-										<div class="wrapper-inner__rating"><a class="rating_image"></a><span class="rating-result">4</span></div>
-										<div class="wrap-price">
-											<p class="wrapper-inner__price">11 290 ₽</p>
-											<button class="wrapper-inner__button">В корзину</button>
-											<div class="wrapper-inner__avail"><span class="avail__text">В наличии</span></div>
-										</div>
-									</div>
-								</li>
-								<li class="contetn-page__item">
-									<div class="wrapper-inner">
-										<div class="wrapper-inner__gallery wrapper-inner__gallery_9"><a class="main-pick main-pick-9"><img src="img/phones/phone_9.png" alt=" " class="gallery__img image-gallery"></a>
-											<ul class="slider__list">
-												<li class="slider__item">
-													<li class="slider__item"><a class=" min-pick min-pick_1 min-pick-9_1"><img src="img/phones/phone_9.png" alt="" class="image-gallery_min"></a></li>
-													<li class="slider__item"><a class=" min-pick min-pick_2 min-pick-9_2"><img src="img/phones/phone_9_min_2.png" alt="" class="image-gallery_min"></a></li>
-													<li class="slider__item"><a class=" min-pick min-pick_3  min-pick-9_3"><img src="img/phones/phone_9_min_3.png" alt="" class="image-gallery_min"></a></li>
-												</li>
-											</ul>
-										</div>
-										<p class="wrapper-inner__article">Артикл<span class="wrapper-inner__article_number"> &#160 9</span>
-										</p>
-										<p class="wrapper-inner__name">Samsung GT-193011 GALAXY S 3</p>
-										<div class="about"><span class="about_text">Смартфон Samsung GT-I9301I GALAXY S 3 Ceramic White Моноблок, Micro-SIM, Android 4.4, 3G, Bluetooth 4.0, EDGE, GPRS, WAP, Wi-Fi, Количество ядер процессора 4, Частота процессора 1400 МГц...</span></div>
-										<ul class="characteristics">
-											<li class="characteristics__item"><span class="charecteristics__what">Тип SIM-карты &#160</span><span class="charecteristics__this">Micro-SIM</span><span class="charecteristics__comma">,&#160</span></li>
-											<li class="characteristics__item"><span class="charecteristics__what">Количество SIM-карт &#160</span><span class="charecteristics__this">1</span><span class="charecteristics__comma">,&#160</span></li>
-											<li class="characteristics__item"><span class="charecteristics__what">Цвет &#160</span><span class="charecteristics__this">Белый</span><span class="charecteristics__comma">,&#160</span></li>
-											<li class="characteristics__item"><span class="charecteristics__what">ОС &#160</span><span class="charecteristics__this">Android</span><span class="charecteristics__comma">,&#160</span></li>
-											<li class="characteristics__item"><span class="charecteristics__what">Связь 3G &#160</span><span class="charecteristics__this">Есть</span><span class="charecteristics__comma">,&#160</span></li>
-											<li class="characteristics__item"><span class="charecteristics__what">4G(LTE) &#160</span><span class="charecteristics__this">Нет</span><span class="charecteristics__comma">,&#160</span></li>
-											<li class="characteristics__item"><span class="charecteristics__what">GPS-модуль &#160</span><span class="charecteristics__this">Есть</span><span class="charecteristics__comma">&#160 ...</span></li>
-										</ul>
-										<div class="wrapper-inner__rating"><a class="rating_image"></a><span class="rating-result">4</span></div>
-										<div class="wrap-price">
-											<p class="wrapper-inner__price">11 290 ₽</p>
-											<button class="wrapper-inner__button">В корзину</button>
-											<div class="wrapper-inner__avail"><span class="avail__text">В наличии</span></div>
-										</div>
-									</div>
-								</li>
-							</ul>
-						</div>
-						<div class="pages">
-							<ul class="pages__list">
-								<li class="pages__item"><a class="pages__link"><</a></li>
-								<li class="pages__item pages__item_active"><a class="pages__link">1</a></li>
-								<li class="pages__item"><a class="pages__link">2</a></li>
-								<li class="pages__item"><a class="pages__link">3</a></li>
-								<li class="pages__item"><a class="pages__link">></a></li>
-							</ul>
+					<div class="attention">
+						<div class="title-page">Важная информация</div>
+						<div class="attention__text">
+							<p>Задача организации, в особенности же начало повседневной работы по формированию позиции представляет собой интересный эксперимент проверки дальнейших направлений развития. Таким образом рамки и место обучения кадров требуют определения и уточнения направлений прогрессивного развития. &#010; Повседневная практика показывает, что постоянное информационно-пропагандистское обеспечение нашей деятельности представляет собой интересный эксперимент проверки соответствующий условий активизации. Повседневная практика показывает, что сложившаяся структура организации позволяет выполнять важные задания по разработке позиций, занимаемых участниками в отношении поставленных задач. Значимость этих проблем настолько очевидна, что начало повседневной работы по формированию позиции позволяет оценить значение существенных финансовых и административных условий. С другой стороны постоянное информационно-пропагандистское обеспечение нашей деятельности позволяет оценить значение форм развития. Таким образом рамки и место обучения кадров представляет собой интересный эксперимент проверки существенных финансовых и административных условий.</p>
+							<p>Задача организации, в особенности же начало повседневной работы по формированию позиции представляет собой интересный эксперимент проверки дальнейших направлений развития. Таким образом рамки и место обучения кадров требуют определения и уточнения направлений прогрессивного развития. &#010; Повседневная практика показывает, что постоянное информационно-пропагандистское обеспечение нашей деятельности представляет собой интересный эксперимент проверки соответствующий условий активизации. Повседневная практика показывает, что сложившаяся структура организации позволяет выполнять важные задания по разработке позиций, занимаемых участниками в отношении поставленных задач. Значимость этих проблем настолько очевидна, что начало повседневной работы по формированию позиции позволяет оценить значение существенных финансовых и административных условий. С другой стороны постоянное информационно-пропагандистское обеспечение нашей деятельности позволяет оценить значение форм развития. Таким образом рамки и место обучения кадров представляет собой интересный эксперимент проверки существенных финансовых и административных условий.</p>
+							<p>Задача организации, в особенности же начало повседневной работы по формированию позиции представляет собой интересный эксперимент проверки дальнейших направлений развития. Таким образом рамки и место обучения кадров требуют определения и уточнения направлений прогрессивного развития. &#010; Повседневная практика показывает, что постоянное информационно-пропагандистское обеспечение нашей деятельности представляет собой интересный эксперимент проверки соответствующий условий активизации. Повседневная практика показывает, что сложившаяся структура организации позволяет выполнять важные задания по разработке позиций, занимаемых участниками в отношении поставленных задач. Значимость этих проблем настолько очевидна, что начало повседневной работы по формированию позиции позволяет оценить значение существенных финансовых и административных условий. С другой стороны постоянное информационно-пропагандистское обеспечение нашей деятельности позволяет оценить значение форм развития. Таким образом рамки и место обучения кадров представляет собой интересный эксперимент проверки существенных финансовых и административных условий.</p>
+							<p>Задача организации, в особенности же начало повседневной работы по формированию позиции представляет собой интересный эксперимент проверки дальнейших направлений развития. Таким образом рамки и место обучения кадров требуют определения и уточнения направлений прогрессивного развития. &#010; Повседневная практика показывает, что постоянное информационно-пропагандистское обеспечение нашей деятельности представляет собой интересный эксперимент проверки соответствующий условий активизации. Повседневная практика показывает, что сложившаяся структура организации позволяет выполнять важные задания по разработке позиций, занимаемых участниками в отношении поставленных задач. Значимость этих проблем настолько очевидна, что начало повседневной работы по формированию позиции позволяет оценить значение существенных финансовых и административных условий. С другой стороны постоянное информационно-пропагандистское обеспечение нашей деятельности позволяет оценить значение форм развития. Таким образом рамки и место обучения кадров представляет собой интересный эксперимент проверки существенных финансовых и административных условий.</p>
+							<p>Задача организации, в особенности же начало повседневной работы по формированию позиции представляет собой интересный эксперимент проверки дальнейших направлений развития. Таким образом рамки и место обучения кадров требуют определения и уточнения направлений прогрессивного развития. &#010; Повседневная практика показывает, что постоянное информационно-пропагандистское обеспечение нашей деятельности представляет собой интересный эксперимент проверки соответствующий условий активизации. Повседневная практика показывает, что сложившаяся структура организации позволяет выполнять важные задания по разработке позиций, занимаемых участниками в отношении поставленных задач. Значимость этих проблем настолько очевидна, что начало повседневной работы по формированию позиции позволяет оценить значение существенных финансовых и административных условий. С другой стороны постоянное информационно-пропагандистское обеспечение нашей деятельности позволяет оценить значение форм развития. Таким образом рамки и место обучения кадров представляет собой интересный эксперимент проверки существенных финансовых и административных условий.</p>
+							<p>Задача организации, в особенности же начало повседневной работы по формированию позиции представляет собой интересный эксперимент проверки дальнейших направлений развития. Таким образом рамки и место обучения кадров требуют определения и уточнения направлений прогрессивного развития. &#010; Повседневная практика показывает, что постоянное информационно-пропагандистское обеспечение нашей деятельности представляет собой интересный эксперимент проверки соответствующий условий активизации. Повседневная практика показывает, что сложившаяся структура организации позволяет выполнять важные задания по разработке позиций, занимаемых участниками в отношении поставленных задач. Значимость этих проблем настолько очевидна, что начало повседневной работы по формированию позиции позволяет оценить значение существенных финансовых и административных условий. С другой стороны постоянное информационно-пропагандистское обеспечение нашей деятельности позволяет оценить значение форм развития. Таким образом рамки и место обучения кадров представляет собой интересный эксперимент проверки существенных финансовых и административных условий.</p>
 						</div>
 					</div>
 				</div>
 			</div>
-			<div class="info">
-				<p class="info__title">  Важная информация</p>
-				<p id="info__text" class="info__text">
-					 &#8195;&#8195;&#8195;&#8195;Задача организации, в особенности же начало повседневной работы по формированию позиции представляет собой интересный эксперимент проверки дальнейших направлений развития. Таким образом рамки и место обучения кадров требуют определения и уточнения направлений прогрессивного развития. &#010; Повседневная практика показывает, что постоянное информационно-пропагандистское обеспечение нашей деятельности представляет собой интересный эксперимент проверки соответствующий условий активизации. Повседневная практика показывает, что сложившаяся структура организации позволяет выполнять важные задания по разработке позиций, занимаемых участниками в отношении поставленных задач. Значимость этих проблем настолько очевидна, что начало повседневной работы по формированию позиции позволяет оценить значение существенных финансовых и административных условий. С другой стороны постоянное информационно-пропагандистское обеспечение нашей деятельности позволяет оценить значение форм развития. Таким образом рамки и место обучения кадров представляет собой интересный эксперимент проверки существенных финансовых и административных условий.
-					   Таким образом дальнейшее развитие различных форм деятельности позволяет выполнять важные задания по разработке систем массового участия. С другой стороны постоянное информационно-пропагандистское обеспечение нашей деятельности играет важную роль в формировании систем массового участия. Разнообразный и богатый опыт постоянное информационно-пропагандистское обеспечение нашей деятельности в значительной степени обуславливает создание дальнейших направлений развития. Идейные соображения высшего порядка, а также дальнейшее развитие различных форм деятельности в значительной степени обуславливает создание дальнейших направлений развития.
-					 Не следует, однако забывать, что начало повседневной работы по формированию позиции требуют определения и уточнения новых предложений. С другой стороны сложившаяся структура организации требуют определения и уточнения новых предложений. Повседневная практика показывает, что рамки и место обучения кадров в значительной степени обуславливает создание систем массового участия. Товарищи! рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании модели развития. Повседневная практика показывает, что сложившаяся структура организации представляет собой интересный эксперимент проверки соответствующий условий активизации.
-					 Товарищи! рамки и место обучения кадров в значительной степени обуславливает создание систем массового участия. Идейные соображения высшего порядка, а также новая модель организационной деятельности представляет собой интересный эксперимент проверки позиций, занимаемых участниками в отношении поставленных задач. Идейные соображения высшего порядка, а также постоянное информационно-пропагандистское обеспечение нашей деятельности представляет собой интересный эксперимент проверки форм развития.
-					Идейные соображения высшего порядка, а также постоянное информационно-пропагандистское обеспечение нашей деятельности влечет за собой процесс внедрения и модернизации соответствующий условий активизации. Таким образом рамки и место обучения кадров влечет за собой процесс внедрения и модернизации системы обучения кадров, соответствует насущным потребностям. Повседневная практика показывает, что сложившаяся структура организации требуют определения и уточнения дальнейших направлений развития. Товарищи! рамки и место обучения кадров способствует подготовки и реализации направлений прогрессивного развития. Идейные соображения высшего порядка, а также укрепление и развитие структуры позволяет оценить значение систем массового участия. Идейные соображения высшего порядка, а также дальнейшее развитие различных форм деятельности позволяет выполнять важные задания по разработке модели развития.
-				</p>
-			</div>
 		</div>
 		<footer class="footer">
-			<div class="footer__container"><a class="logo-ft"></a>
+			<div class="footer__container"><a href="#" class="logo-ft"><img src="../img/logo_wt.png" alt="cooltech logo" class="logo_img">
+					<div class="logo__text">cooltech</div></a>
 				<div class="footer__socials">
 					<ul class="socials__list">
 						<li class="socials__item socials__item"><a href="#" class="socials__link socials__link socials__link_wt_fb"></a></li>
@@ -536,7 +863,10 @@
 				<p class="copyright__text">All rights reserved. 2015. no copy alowed</p>
 			</div>
 		</footer>
-		<script src="/js/main.js"></script>
-		<script src="js/select.js"></script>
+		<script src="/bower/jquery/dist/jquery.min.js"></script>
+		<script src="js/jquery-ui.min.js"></script>
+		<script src="/js/jquery.columnizer.min.js"></script>
+		<script src="js/select2.min.js"></script>
+		<script src="js/main.js"></script>
 	</body>
 </html>

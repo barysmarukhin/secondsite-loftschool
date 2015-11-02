@@ -1,0 +1,29 @@
+.attention__text {
+    margin-left:-39px;
+    p {
+        font-size: 14px;
+        line-height: 20px;
+        color: $black;
+        margin-bottom: 20px;
+        margin-left: 39px;
+        text-align:justify;
+    }
+
+    .column {
+        &.first {
+            float: left !important;
+        }
+
+        &.last {
+            float: right !important;
+        }
+    }
+}
+.title-page{
+    color: #333333;
+    font-family: opensans-bold-webfont;
+    font-size: 20px;
+    line-height: 22px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}

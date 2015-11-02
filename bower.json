@@ -1,8 +1,11 @@
 {
   "name": "secondsite",
   "dependencies": {
-    "jquery": "1.8",
+    "jquery": "^1.8",
     "normalize-css": "normalize.css#~3.0.3",
-    "modernizr": "~3.1.0"
+    "modernizr": "~3.1.0",
+    "jquery-ui": "~1.11.4",
+    "select2": "~4.0.0",
+    "jquery.columnizer": "~1.6.2"
   }
 }

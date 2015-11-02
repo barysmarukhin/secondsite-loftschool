@@ -1,11 +1,14 @@
 .sidebar {
   float: left;
+  width:335px;
 
 }
 
+/*categories*/
+
 .product-class {
+  background-color:#ffffff;
   width: 333px;
-  //height: 90px;
   min-height: 85px;
   overflow: hidden;
   border: solid 1px #dee1e4;
@@ -38,191 +41,216 @@
   }
 }
 
-.product-settings {
-  width: 333px;
-  max-height: 1200px;
-  overflow: hidden;
-  background: #fbfbfb;
-  border: solid 1px #dee1e4;
-  @include border-radius(5px);
-  @include box-sizing;
-  &__item {
-    border-top: 1px solid #dee1e4;
-    .trigger {
-      display: block;
-      padding: 16px 29px;
-      margin-bottom: -2px;
-      font-family: opensans-semibold-webfont;
-      cursor: pointer;
-      &_open:hover {
-        background: #d9e5ea url('../img/sidebar_list_up.png') no-repeat right center;
-        background-position-y: 20px;
-        background-position-x: 275px;
-      }
-      &_close:hover {
-          background: #d9e5ea url('../img/sidebar_list_down.png') no-repeat right center;
-          background-position-y: 20px;
-          background-position-x: 275px;
-        }
-    }
-    &:first-child {
-      border: none;
-    }
-    .inner-item {
-      display: none;
-      padding: 0 29px 16px 29px;
-    }
-    .avail{
-      &__item{
-        margin-top: 15px;
-        &:first-child{
-          margin-top: 5px;
-        }
-      }
-      &__in-all {
-          display: none;
-        width: 20px;
-        height: 20px;
-        cursor: pointer;
-        @include outline;
-        + .avail__text {
-          cursor: pointer;
-          padding-left: 30px;
-          background: url('../img/radio.png') no-repeat left;
-        }
-        &:checked + .avail__text {
-          background: url('../img/radio_active.png') no-repeat left;
-        }
-      }
-    }
-    .brand {
-      &__list {
-        margin-bottom: 15px;
-      }
-      &__item{
-        margin-top: 15px;
-        &:first-child{
-          margin-top: 5px;
-        }
-      }
-      &__checkbox{
-        display: none;
-        &:checked + .brand__text {
-          background: url('../img/checkbox_active.png') no-repeat left;
-        }
-      }
+/* --------- filter --------- */
 
-      &__text {
-        padding-left: 30px;
-        cursor: pointer;
-        background: url('../img/checkbox.png') no-repeat left;
-      }
-      &__filter-off{
-          @include outline;
-          color: #5db2fc;
-      }
-    }
-    .price {
-      margin-top: 5px;
-      margin-bottom: 15px;
-      &__text {
-        margin-right: 13px;
-      }
-        &__from,&__to {
-          width: 80px;
-          height: 28px;
-          border: 1px solid #dee1e4;
-          @include border-radius(5px);
-          @include outline;
-          @include box-sizing;
-          padding-left: 10px;
-        }
-      &__from {
-        margin-right: 42px;
-      }
-    }
-    .color {
-      margin-top: 5px;
-      &__list {
-        margin-left: -21px;
-        margin-bottom: -21px;
-      }
-      @include box-sizing;
-      @include list-item-link-inline-block;
-      &__item {
-        margin-left: 21px;
-        margin-bottom: 21px;
-        width: 37px;
-        height: 37px;
-        border: 1px solid #dee1e4;
-
-      }
-      &__filter-off{
-        margin-left: 19px;
-        @include outline;
-        color: #5db2fc;
-      }
-      @for $q from 1 through length($colorNames){
-        &__item_#{nth($colorNames, $q)} {
-          background: #{nth($colors, $q)};
-          cursor: pointer;
-          @include outline;
-          border-radius: 5px;
-          @include box-sizing;
-          &:hover {
-            border: 3px solid #ff6600;
-          }
-          &_active {
-            border: 3px solid #ff6600;
-          }
-        }
-      }
-    }
-  }
-  .os {
-    &__list {
-      margin-bottom: 15px;
-    }
-    &__item{
-      margin-top: 15px;
-      &:first-child{
-        margin-top: 5px;
-      }
-    }
-    &__checkbox{
-      display: none;
-      &:checked + .os__text {
-        background: url('../img/checkbox_active.png') no-repeat left;
-      }
-    }
-
-    &__text {
-      padding-left: 30px;
-      cursor: pointer;
-      background: url('../img/checkbox.png') no-repeat left;
-    }
-    &__filter-off{
-      @include outline;
-      color: #5db2fc;
-    }
-  }
-
+.filter__content {
+  display: none;
+  margin-top: 30px;
 }
 
-.ui-slider{
-  margin-bottom: 15px;
-  height: 3px;
-  background: #dee1e4;
-  border: none;
-  @include outline;
-  .ui-slider-range{
-    background: #ff6600;
+.filter__list {
+  @extend .product-class;
+}
+
+.filter__item {
+  padding: 12px 26px;
+  border-top: 1px solid $grey;
+  
+  &:first-child {
+    border-top: 0 none;
   }
-  .ui-slider-handle{
-    top: 0px;
-    border: none;
-    @include outline;
-    background: url("../img/price_tip.png") no-repeat center;
+  &.active {
+    .filter__title {
+      &:after {
+        @include get-sprite($select-tr-map, to-top);
+      }
+    }
   }
- 
+}
+
+.filter__title {
+  padding-right: 30px;
+  position: relative;
+
+  &:after {
+    content: '';
+    @include get-sprite($select-tr-map, to-bottom);
+    position: absolute;
+    top: 7px;
+    right: 10px;
+  }
+}
+
+.filter__choose-item {
+  margin-top: 16px;
+
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+.filter__title-link {
+  color: $black;
+  font-size: 16px;
+  line-height: 18px;
+  @include open-sans(semibold);
+  text-decoration: none;
+}
+
+.filter__choose {
+  margin-bottom: 13px;
+}
+
+.filter__choose-label {
+  display: block;
+  position: relative;
+}
+
+.filter__choose-elem {
+  border: 3px solid #dee1e4;
+  width: 13px;
+  height: 13px;
+  @include border-radius(50%);
+  position: relative;
+  @include transition(border-color .3s);
+  @include inlineblock();
+
+  &:after {
+    content: "";
+    @include absolute-center;
+    width: 0;
+    height: 0;
+    @include border-radius(50%);
+    background: $orange;
+    @include transition(.3s);
+  }
+}
+
+.filter__choose-input {
+  position: absolute;
+  top: 0;
+  left: -9999px;
+
+  &:checked + .filter__choose-elem {
+    border-color: $orange;
+
+    &:after {
+      width: 9px;
+      height: 9px;
+    }
+  }
+}
+
+.filter__choose-text {
+  @include inlineblock(top);
+  font-size: 14px;
+  line-height: 16px;
+  color: $black;
+  max-width: 240px;
+  margin-left: 8px;
+}
+
+/* --------- checkboxes --------- */
+
+.filter__choose_checkboxes {
+  .filter__choose-input {
+    &:checked + .filter__choose-elem {
+      background: $orange;
+
+      &:after {
+        opacity: 1;
+      }
+    }
+  }
+  
+  .filter__choose-elem {
+    width: 20px;
+    height: 20px;
+    @include border-radius(4px);
+    background: $grey;
+    @include transition(.2s);
+    border: 0 none;
+
+    &:after {
+      content: "";
+      display: block;
+      @include absolute-center;
+      opacity: 0;
+      @include transition(.2s);
+      @include get-sprite($misc-sprite, checkbox);
+      @include border-radius(0);
+      width: 13px !important;
+      height: 10px !important;
+    }
+  }
+}
+
+.filter__reset {
+  color: #5db2fc;
+  font-size: 14px;
+  line-height: 16px;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+/* --------- colors --------- */
+
+.filter__colors-link {
+  border: 1px solid $grey;
+  width: 37px;
+  height: 37px;
+  display: block;
+}
+
+.filter__colors-item {
+  @include inlineblock();
+  border: 3px solid transparent;
+  margin-left: 10px;
+  margin-bottom: 8px;
+
+  &:hover {
+    border-color: $orange;
+  }
+}
+
+.filter__colors {
+  margin-left: -10px;
+}
+
+/* --------- slider --------- */
+
+.filter__slider-displays {
+  @include clearfix;
+  margin-bottom: 18px;
+}
+
+.filter__slider-left {
+  float: left;
+  width: 50%;
+}
+
+.filter__slider-right {
+  float: right;
+  width: 50%;
+}
+
+.filter__slider-input {
+   border: 1px solid #dee1e4;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  padding: 10px 8px;
+  width: 83px;
+  @include inlineblock(middle);
+}
+
+.filter__slider-text {
+  @include inlineblock(middle);
+  font-size: 14px;
+  line-height: 16px;
 }

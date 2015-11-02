@@ -1,5 +1,5 @@
 $fontsDir : '../fonts/';
-$fonts : (opensans-bold-webfont, opensans-bolditalic-webfont, opensans-extrabold-webfont, opensans-extrabolditalic-webfont, opensans-italic-webfont, opensans-light-webfont, opensans-lightitalic-webfont, opensans-semibold-webfont, opensans-semibolditalic-webfont, opensans-regular-webfont);
+$fonts : (opensans-bold-webfont, opensans-bolditalic-webfont, opensans-extrabold-webfont, opensans-extrabolditalic-webfont, opensans-italic-webfont, opensans-light-webfont, opensans-lightitalic-webfont, opensans-semibold-webfont, opensans-semibolditalic-webfont, opensans-regular-webfont, rouble_1-webfont);
 
 @each $font in $fonts {
   @font-face {
@@ -12,5 +12,36 @@ $fonts : (opensans-bold-webfont, opensans-bolditalic-webfont, opensans-extrabold
     url($fontsDir+$font+'.svg#open_sansbold') format('svg');
     font-weight: normal;
     font-style: normal;
+  }
+}
+.rub {
+    font-family: rouble_1-webfont;
+    font-style: normal;
+
+    &:after {
+        content: "a";
+        font-style: inherit;
+        font-size: inherit;
+        line-height: inherit;
+    }
+}
+
+@mixin open-sans($style: regular){
+  font-family: opensans-regular-webfont;
+
+  @if ($style == light) {
+    font-weight: 100;
+  }
+
+  @if ($style == regular){
+    font-weight: 400;
+  }
+
+  @if ($style == semibold){
+    font-weight: 600;
+  }
+
+  @if ($style == bold){
+    font-weight: 700;
   }
 }

@@ -1,6 +1,6 @@
 /* --------- adjustment --------- */
 
-$container-width    : 1264px;
+$container-width    : 1105px;
 $footer-height      : 220px;
 $body-font          : opensans-regular-webfont, Arial, Helvetica, sans-serif;
 $bodyColor          : #f4f4f4;
@@ -21,8 +21,7 @@ body {
 
 .container {
     @include clearfix;
-    min-width: 960px;
-    max-width: 1096px;
+    width: $container-width;
     margin:  0 auto;
     position: relative;
     @include box-sizing;

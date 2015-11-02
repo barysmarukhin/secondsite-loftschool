@@ -6,6 +6,12 @@ $colors :("#ffffff","#cccccc","#000000","#0a3153","#ff1800","#fff343","#fb914a",
 
 @import "compass";
 
+/* --------- common colors --------- */
+
+$black: #000000;
+$orange: #ff6e35;
+$grey: #dee1e4;
+
 /* --------- normalize --------- */
 
 @import "_misc/normalize";
@@ -22,8 +28,24 @@ $colors :("#ffffff","#cccccc","#000000","#0a3153","#ff1800","#fff343","#fb914a",
 
 @import "_misc/fonts";
 
-/* --------- sections --------- */
+/* --------- sprite --------- */
 
+$misc-sprite:sprite-map('../img/_misc/*.png', $spacing:70px);
+
+/* ---------- plugins ---------- */
+
+@import "_plugins/jquery-ui";
+@import "_plugins/select2";
+
+/* ---------- widgets ---------- */
+
+@import "_widgets/_select";
+@import "_widgets/_slider";
+
+/* --------- sections --------- */
+@import "sections/products";
+@import "sections/pagination";
+@import "sections/attention";
 @import "sections/header";
 @import "sections/navigation";
 @import "sections/crumbs-title";
@@ -32,3 +54,4 @@ $colors :("#ffffff","#cccccc","#000000","#0a3153","#ff1800","#fff343","#fb914a",
 @import "sections/content";
 @import "sections/info";
 @import "sections/footer";
+

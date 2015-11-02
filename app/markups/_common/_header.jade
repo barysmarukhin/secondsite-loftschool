@@ -8,11 +8,13 @@ header.header
 						li.socials__item
 							a.socials__link(href="#" class="socials__link "+"socials__link_"+social)
 			.phone
-				a.phone__text +7 (921) 123-12-13
+				a(href="tel:+79211231213").phone__text +7 (921) 123-12-13
 			.address
 				p.adress__text ул. Маяковская 6, офис 17
 	.header__bottom
-		a.header__bottom-logo
+		a(href="#").header__bottom-logo
+			img(src="../img/logo.png" alt="cooltech logo").logo_img
+			.logo__text cooltech
 		form.header__bottom-search
 			input.header__bottom-search__input(type="text" placeholder="Что будем искать?")
 			button.header__bottom-search__button(type="submit")
