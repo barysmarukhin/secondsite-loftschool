@@ -167,8 +167,7 @@ var Accordeon = (function(){
 
 
         if (!container.hasClass('active')) {
-            otherContent.slideUp().closest('.filter__item').removeClass('active');
-
+            
             container.addClass('active');
             content.stop(true, true).slideDown();
         } else {
@@ -179,7 +178,7 @@ var Accordeon = (function(){
 
     return {
         init: function(){
-            $('.filter__title-link').on('click', function(e){
+            $('.filter__title').on('click', function(e){
                 e.preventDefault();
                 _openSection($(this));
 

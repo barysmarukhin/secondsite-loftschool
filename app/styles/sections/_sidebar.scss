@@ -45,7 +45,7 @@
 
 .filter__content {
   display: none;
-  margin-top: 30px;
+  padding: 12px 26px;
 }
 
 .filter__list {
@@ -53,7 +53,6 @@
 }
 
 .filter__item {
-  padding: 12px 26px;
   border-top: 1px solid $grey;
   
   &:first-child {
@@ -71,13 +70,14 @@
 .filter__title {
   padding-right: 30px;
   position: relative;
+  padding: 12px 26px;
 
   &:after {
     content: '';
     @include get-sprite($select-tr-map, to-bottom);
     position: absolute;
-    top: 7px;
-    right: 10px;
+    top: 15px;
+    right: 20px;
   }
 }
 
