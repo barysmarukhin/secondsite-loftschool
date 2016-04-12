@@ -1,0 +1,28 @@
+include _common/_mixins
+block pagevariables
+doctype html
+html(lang="ru-Ru")
+    head
+        meta(http-equiv = 'Content-Type', content = 'text/html; charset=utf-8')
+        link(rel="stylesheet" type='text/css' href="/css/main.css")
+        script(src='js/modernizr-2.6.2-respond-1.1.0.min.js')
+        title
+            block title
+    body
+        <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+        <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+        <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+        <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+        .wrapper
+            .main-content
+
+                include _common/_header
+                include _common/_nav
+                .container
+                    block content
+        include _common/_footer                 
+        script(src="/js/jquery-1.11.3.min.js")
+        script(src="js/jquery-ui.min.js")
+        script(src="/js/jquery.columnizer.min.js")
+        script(src="js/select2.min.js")
+        script(src="js/main.js")

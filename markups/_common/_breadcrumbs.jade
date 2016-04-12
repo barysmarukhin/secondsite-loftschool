@@ -1,0 +1,6 @@
+.breadcrumbs
+    .container
+        -var items =["Главная,"Каталог"]
+        each intem in items
+         li(class = "breadcrumbs__item" + ((item == "Каталог")?'active':''))
+            a(href="#").breadcrumbs__link=item
